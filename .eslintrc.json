@@ -15,7 +15,8 @@
         "react/prop-types": 0,
         "react/state-in-constructor": 0,
         "lines-between-class-members": 0,
-        "import/no-extraneous-dependencies": 0
+        "import/no-extraneous-dependencies": 0,
+        "react/jsx-no-bind": 0
     },
     "parser": "babel-eslint"
 }
