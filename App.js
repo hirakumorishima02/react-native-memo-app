@@ -13,9 +13,6 @@ import SignupScreen from './src/screens/SignupScreen';
 
 import ENV from './env.json';
 
-// eslint-disable-next-line
-require("firebase/firestore");
-
 const firebaseConfig = {
   apiKey:             ENV.FIREBASE_API_KEY,
   authDomain:         ENV.FIREBASE_AUTH_DOMAIN,
@@ -37,14 +34,17 @@ const App = createStackNavigator({
   MemoCreate: { screen: MemoCreateScreen },
 }, {
   defaultNavigationOptions: {
-    headerTitle: 'Memoru',
+    headerTitle: 'HandsOn',
     headerTintColor: '#fff',
     headerBackTitle: null,
+    headerTitleAllowFontScaling: true,
     headerStyle: {
       backgroundColor: '#265366',
     },
     headerTitleStyle: {
       color: '#fff',
+      fontSize: 35,
+      fontFamily: 'Academy Engraved LET',
     },
   },
 });
