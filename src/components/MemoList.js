@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
         padding: 16,
         borderBottomWidth: 1,
         borderBottomColor: '#ddd',
-        backgroundColor: '#FFF',
+        backgroundColor: '#fffff7',
       },
       memoTitle: {
         fontSize: 18,

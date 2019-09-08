@@ -57,8 +57,8 @@ const styles = StyleSheet.create({
         width: '100%',
     },
     memoHeader: {
-        height: 100,
-        backgroundColor: '#17313C',
+        height: 73,
+        backgroundColor: '#f56262',
         justifyContent: 'center',
         padding: 10,
     },
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
         fontSize: 20,
     },
     editButton: {
-        top: 75,
+        top: 48,
     },
 });
 

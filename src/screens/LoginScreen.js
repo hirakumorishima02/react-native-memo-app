@@ -94,6 +94,7 @@ const styles = StyleSheet.create({
         fontSize: 28,
         alignSelf: 'center',
         marginBottom: 24,
+        color: '#7f7f7f',
     },
     input: {
         backgroundColor: '#eee',
@@ -104,7 +105,7 @@ const styles = StyleSheet.create({
         padding: 8,
     },
     button: {
-        backgroundColor: '#E31676',
+        backgroundColor: '#f56262',
         height: 48,
         borderRadius: 4,
         justifyContent: 'center',

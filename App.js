@@ -39,10 +39,10 @@ const App = createStackNavigator({
     headerBackTitle: null,
     headerTitleAllowFontScaling: true,
     headerStyle: {
-      backgroundColor: '#265366',
+      backgroundColor: '#f5b2b2',
     },
     headerTitleStyle: {
-      color: '#fff',
+      color: '#303030',
       fontSize: 35,
       fontFamily: 'Academy Engraved LET',
     },
