@@ -9,10 +9,9 @@ class MemoCreateScreen extends React.Component {
     }
 
     handlePress() {
-        const { params } = this.props.navigation.state;
         const db = firebase.firestore();
-        // eslint-disable-next-line no-irregular-whitespace
-        db.collection(`users/${params.currentUser.user.uid}/memos`).add({
+        const { currentUser } = firebase.auth();
+        db.collection(`users/${currentUser.uid}/memos`).add({
             body: this.state.body,
             created_on: new Date(),
         })
