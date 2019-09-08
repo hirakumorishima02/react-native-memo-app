@@ -1,7 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableHighlight } from 'react-native';
-
+import { StyleSheet, Text, View, TextInput, TouchableHighlight, TouchableOpacity } from 'react-native';
 import firebase from 'firebase';
+import { NavigationActions, StackActions } from 'react-navigation';
 
 class LoginScreen extends React.Component {
     state = {
@@ -9,15 +9,20 @@ class LoginScreen extends React.Component {
         password: 'aaaaaaaa',
     }
 
-    // eslint-disable-next-line
     handleSubmit() {
         firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password)
-        .then((user) => {
-            this.props.navigation.navigate('Home');
+        .then(() => {
+            const resetAction = StackActions.reset({
+                index: 0,
+                actions: [NavigationActions.navigate({ routeName: 'Home' })], });
+            this.props.navigation.dispatch(resetAction);
         })
-        .catch((error) => {
-            console.log(error);
+        .catch(() => {
         });
+    }
+
+    handlePress() {
+        this.props.navigation.navigate('Signup');
     }
 
     render() {
@@ -48,6 +53,10 @@ class LoginScreen extends React.Component {
                 <TouchableHighlight style={styles.button} title="Login" onPress={this.handleSubmit.bind(this)}>
                     <Text style={styles.buttonTitle}>Login</Text>
                 </TouchableHighlight>
+
+                <TouchableOpacity style={styles.signup} onPress={this.handlePress.bind(this)}>
+                    <Text style={styles.signupText}>Sign up</Text>
+                </TouchableOpacity>
             </View>
         );
     }
@@ -86,6 +95,13 @@ const styles = StyleSheet.create({
         color: '#fff',
         fontSize: 18,
     },
+    signup: {
+        marginTop: 16,
+        alignSelf: 'center',
+    },
+    signupText: {
+        fontSize: 16,
+    }
 });
 
 export default LoginScreen;
