@@ -1,19 +1,17 @@
 {
   "expo": {
-    "name": "memoru",
-    "slug": "memoru",
+    "name": "HanzOn",
+    "slug": "HanzOn",
     "privacy": "public",
     "sdkVersion": "34.0.0",
     "platforms": [
-      "ios",
-      "android",
-      "web"
+      "ios"
     ],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/Untitled.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -24,7 +22,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.hira-jasorede.handson"
     }
   }
 }

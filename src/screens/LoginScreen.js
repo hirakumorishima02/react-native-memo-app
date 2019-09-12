@@ -10,7 +10,7 @@ class LoginScreen extends React.Component {
     state = {
         email: '',
         password: '',
-        isLoading: true,
+        isLoading: false,
     }
 
     async componentDidMount() {
